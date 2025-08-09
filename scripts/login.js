@@ -22,3 +22,19 @@ login.addEventListener("click", function(){
   alert("Acesso negado!");
 
 });
+
+var show = document.getElementById("show");
+
+show.addEventListener("change", function(){
+
+  var passwordLogin = document.getElementById("passwordLogin");
+
+  var type = passwordLogin.getAttribute("type");
+
+  if(type === "password"){
+    passwordLogin.setAttribute("type", "text");
+  } else {
+    passwordLogin.setAttribute("type", "password");
+  }
+
+});

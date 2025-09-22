@@ -1,11 +1,11 @@
 
-var register = document.getElementById("register");
+const register = document.querySelector("#register");
 
-register.addEventListener("click", function(){
+register.addEventListener("click", () => {
   
-  var name = document.getElementById("name").value;
-  var user = document.getElementById("userRegister").value;
-  var password = document.getElementById("passwordRegister").value;
+  const name = document.querySelector("#name").value;
+  const user = document.querySelector("#userRegister").value;
+  const password = document.querySelector("#passwordRegister").value;
 
   sessionStorage.setItem("name", name);
   sessionStorage.setItem("user", user);
@@ -14,5 +14,22 @@ register.addEventListener("click", function(){
   alert("Usuário cadastrado com sucesso.");
 
   window.location.href = "../pages/login.html";
+  
+});
+
+const show = document.querySelector("#show");
+
+show.addEventListener("change", () => {
+
+  const passwordRegister = document.querySelector("#passwordRegister");
+
+  const type = passwordRegister.getAttribute("type");
+
+  if(type != "password"){
+    passwordRegister.setAttribute("type", "password");
+    return;
+  }
+
+  passwordRegister.setAttribute("type", "text");
   
 });

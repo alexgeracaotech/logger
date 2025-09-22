@@ -1,7 +1,7 @@
 
-var start = document.getElementById("start");
+const start = document.querySelector("#start");
 
-start.addEventListener("click", function(){
+start.addEventListener("click", () => {
 
   window.location.href = "./pages/login.html";
 

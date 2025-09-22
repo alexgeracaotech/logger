@@ -1,40 +1,40 @@
 
-var login = document.getElementById("login");
+const login = document.querySelector("#login");
 
-login.addEventListener("click", function(){
+login.addEventListener("click", () => {
 
-  var user = document.getElementById("userLogin").value;
-  var password = document.getElementById("passwordLogin").value;
+  const user = document.querySelector("#userLogin").value;
+  const password = document.querySelector("#passwordLogin").value;
 
-  var userRegister = sessionStorage.getItem("user");
-  var passwordRegister = sessionStorage.getItem("password");
+  const userRegister = sessionStorage.getItem("user");
+  const passwordRegister = sessionStorage.getItem("password");
 
-  if(user === userRegister && password === passwordRegister){
+  if(user != userRegister && password != passwordRegister){
     
-    alert("Acesso permitido.");
-
-    window.location.href = "../pages/allowed.html";
-
+    alert("Acesso negado!");
     return;
-
+    
   }
-
-  alert("Acesso negado!");
+  
+  alert("Acesso permitido.");
+  
+  window.location.href = "../pages/allowed.html";
 
 });
 
-var show = document.getElementById("show");
+const show = document.querySelector("#show");
 
-show.addEventListener("change", function(){
+show.addEventListener("change", () => {
 
-  var passwordLogin = document.getElementById("passwordLogin");
+  const passwordLogin = document.querySelector("#passwordLogin");
 
-  var type = passwordLogin.getAttribute("type");
+  const type = passwordLogin.getAttribute("type");
 
-  if(type === "password"){
-    passwordLogin.setAttribute("type", "text");
-  } else {
+  if(type != "password"){
     passwordLogin.setAttribute("type", "password");
+    return;
   }
 
+  passwordLogin.setAttribute("type", "text");
+  
 });

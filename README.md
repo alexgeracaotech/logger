@@ -1,3 +1,5 @@
-# Logger
+# System Logger
 
-Sistema de cadastro e login com armazemanto de dados in momory integrando HTML, CSS e JavaScript.
+- Sistema de cadastro e login com armazemanto de dados in momory usando LocalStorage.
+
+- HTML, CSS e JavaScript
